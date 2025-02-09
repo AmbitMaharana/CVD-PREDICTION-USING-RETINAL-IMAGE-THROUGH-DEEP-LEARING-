@@ -13,39 +13,25 @@ This project aims to predict cardiovascular disease (CVD) risk using retinal ima
 
 ## Dataset
 
-The dataset consists of retinal fundus images and a corresponding CSV file containing image IDs and risk labels.
-
-## Installation
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/CVD-PREDICTION-USING-RETINAL-IMAGE.git
-   cd CVD-PREDICTION-USING-RETINAL-IMAGE
-   ```
-2. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
+The dataset consists of retinal fundus images and a corresponding CSV file containing image IDs and risk labels. The dataset is sourced from Kaggle.
 
 ## Usage
 
-### Train the Model
+### Running the Model in Google Colab
 
-Run the training script:
+Since the project is designed to run on Google Colab with a Kaggle dataset, follow these steps:
 
-```sh
-python train.py
-```
-
-Alternatively, open and run `notebook.ipynb` in Google Colab.
-
-### Predict on New Images
-
-Upload new retinal images and run:
-
-```sh
-python predict.py --image path/to/image.png
-```
+1. **Open Google Colab**
+2. **Upload `main.py`** or clone the repository into Colab:
+   ```sh
+   !git clone https://github.com/yourusername/CVD-PREDICTION-USING-RETINAL-IMAGE.git
+   cd CVD-PREDICTION-USING-RETINAL-IMAGE
+   ```
+3. **Set up Kaggle API key** (upload your `kaggle.json` file to Colab and use it to download the dataset).
+4. **Run the script**:
+   ```sh
+   !python main.py
+   ```
 
 ## Model Architecture
 
@@ -63,18 +49,15 @@ The model achieves an accuracy of approximately **88%** on validation data. Belo
 ![Training Accuracy and Loss](images/plot.png)
 
 
-
 ## Folder Structure
 
 ```
 CVD-PREDICTION-USING-RETINAL-IMAGE/
-│── data/                   # Dataset folder
-│── models/                 # Saved models
-│── notebook.ipynb          # Jupyter Notebook (Colab compatible)
-│── train.py                # Training script
-│── predict.py              # Prediction script
-│── requirements.txt        # Dependencies
-│── README.md               # Project documentation
+│── main.py                # Main script for training and prediction
+│── data/                  # Dataset folder (Kaggle dataset)
+│── models/                # Saved models
+│── requirements.txt       # Dependencies
+│── README.md              # Project documentation
 ```
 
 ## Dependencies
@@ -88,6 +71,7 @@ numpy
 matplotlib
 scikit-learn
 google-colab
+kaggle
 ```
 
 ## Contributing
@@ -110,7 +94,7 @@ This project is licensed under the MIT License.
    git commit -m "Initial commit - CVD Prediction Project"
    ```
 
-2. **Create a New Repository on GitHub**\
+2. **Create a New Repository on GitHub**  
    Go to [GitHub](https://github.com/new) and create a repository named `CVD-PREDICTION-USING-RETINAL-IMAGE`.
 
 3. **Connect Local Repo to GitHub**
@@ -122,4 +106,9 @@ This project is licensed under the MIT License.
    ```
 
 4. **Verify the Push** Go to `https://github.com/yourusername/CVD-PREDICTION-USING-RETINAL-IMAGE` to see your files.
+
+
+
+
+
 
